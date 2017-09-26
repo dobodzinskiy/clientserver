@@ -1,6 +1,6 @@
-package request;
+package common.request;
 
-import dto.Bird;
+import common.dto.Bird;
 
 public class AddBirdRequest extends Request {
 

@@ -1,8 +1,8 @@
-package request;
+package common.request;
 
-import dto.Sighting;
+import common.dto.Sighting;
 
-public class AddSightingRequest {
+public class AddSightingRequest extends Request {
 
     private Sighting sighting;
 

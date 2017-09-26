@@ -1,4 +1,4 @@
-package dto;
+package common.dto;
 
 public enum CommandType {
     ADDBIRD("addbird"),

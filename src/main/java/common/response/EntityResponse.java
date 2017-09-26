@@ -1,10 +1,12 @@
-package response;
-
-import com.sun.org.apache.regexp.internal.RESyntaxException;
+package common.response;
 
 public class EntityResponse<T> extends Response {
 
     private T result;
+
+    public EntityResponse(T result) {
+        this.result = result;
+    }
 
     public T getResult() {
         return result;

@@ -1,7 +1,9 @@
-package response;
+package common.response;
 
-import dto.CommandType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import common.dto.CommandType;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Response {
 
     private String id;

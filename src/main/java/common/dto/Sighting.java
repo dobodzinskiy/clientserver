@@ -1,5 +1,6 @@
-package dto;
+package common.dto;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Sighting {
@@ -9,6 +10,15 @@ public class Sighting {
     private String sighting;
 
     private Date date;
+
+    public Sighting(String[] input) {
+        this.birdName = input[0];
+        this.sighting = input[1];
+        this.date = new Date(input[2]);
+    }
+
+    public Sighting() {
+    }
 
     public String getBirdName() {
         return birdName;
@@ -32,5 +42,10 @@ public class Sighting {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return birdName + " " + sighting + " " + date.toString();
     }
 }

@@ -1,9 +1,11 @@
-package request;
+package common.request;
 
 
-import dto.CommandType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import common.dto.CommandType;
 
-public class Request {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Request extends Object {
 
     private String id;
 
