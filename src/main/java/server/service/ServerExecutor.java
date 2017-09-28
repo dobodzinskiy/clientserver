@@ -84,6 +84,10 @@ public class ServerExecutor {
                     response.setStatus("200");
                     response.setCommandType(CommandType.LISTSIGHTINGS);
                     break;
+                case QUIT:
+                    response = new Response();
+                    response.setCommandType(CommandType.QUIT);
+                    break;
             }
         } catch (IOException e) {
             System.err.print("Server received wrong message format. Reason: " + e.getMessage());

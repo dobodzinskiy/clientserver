@@ -9,7 +9,6 @@ import common.response.Response;
 import common.response.SightingsResponse;
 
 import java.io.IOException;
-import java.util.List;
 
 public class ResponseExecutor {
 
@@ -61,7 +60,7 @@ public class ResponseExecutor {
                 case LISTSIGHTINGS:
                     SightingsResponse sightingResponse = mapper.readValue(responseJson, SightingsResponse.class);
                     if (sightingResponse.getSightingList().size() == 0) {
-                        System.out.print("No sightings in database");
+                        System.out.print("No sightings in database for this bird");
                     }
                     for (Sighting sighting : sightingResponse.getSightingList()) {
                         System.out.printf(sighting.toString());

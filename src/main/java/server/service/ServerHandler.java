@@ -22,6 +22,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         Response response = executor.execute((String) msg);
         if (CommandType.QUIT.equals(response.getCommandType())) {
+            executor.saveDataToFile();
             ctx.channel().close();
             ctx.channel().parent().close();
         } else {
